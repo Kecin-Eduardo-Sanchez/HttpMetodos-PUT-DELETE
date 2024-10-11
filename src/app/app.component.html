@@ -1,0 +1,46 @@
+<div class="container">
+  <h2 class="text-center">Gestión Lista de Usuarios</h2>
+  <div>
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>Nombre Completo</th>
+                  <th>Correo Electrónico</th>
+                  <th>Nombre de la Empresa</th>
+                  <th>Acciones</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let usuario of usuarios">
+                  <td><strong>{{ usuario.nombre }}</strong></td>
+                  <td>{{ usuario.email }}</td>
+                  <td>{{ usuario.empresa }}</td>
+                  <td>
+                      <button class="btn btn-warning btn-sm ms-2" (click)="seleccionarUsuario(usuario)">Editar</button>
+                      <button class="btn btn-danger btn-sm ms-2" *ngIf="usuario.id" (click)="eliminarUsuario(usuario.id!)">Eliminar</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  <div>
+    <h2 class="mt-4">Agregar o Editar Usuario</h2>
+    <form (ngSubmit)="agregarOmodificarUsuario()">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre Completo</label>
+            <input type="text" [(ngModel)]="nuevoUsuario.nombre" name="nombre" class="form-control" id="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" [(ngModel)]="nuevoUsuario.email" name="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="empresa" class="form-label">Nombre de la Empresa</label>
+            <input type="text" [(ngModel)]="nuevoUsuario.empresa" name="empresa" class="form-control" id="empresa" required>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            {{ nuevoUsuario.id ? 'Actualizar Usuario' : 'Registrar Usuario' }}
+        </button>
+    </form>
+  </div>
+</div>

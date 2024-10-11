@@ -1,0 +1,88 @@
+body {
+    margin: 0; /* Eliminar márgenes por defecto del body */
+    padding: 0; /* Eliminar padding por defecto del body */
+    background-color: #fdfdfd; /* Fondo blanco */
+    font-family: Arial, sans-serif; /* Fuente moderna */
+    color: #14092b; /* Color del texto (azul muy oscuro) */
+}
+
+.container {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.table {
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
+}
+
+.table th, .table td {
+    padding: 15px; /* Espaciado en celdas */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+.table th {
+    background-color: #884f8f; /* Fondo de encabezado (violeta claro) */
+    color: white; /* Texto en blanco */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #d3a6cc; /* Color de fondo para filas impares (violeta suave) */
+}
+
+.table-striped tbody tr:hover {
+    background-color: rgba(111, 166, 212, 0.2); /* Efecto hover en filas (celeste claro) */
+}
+
+.btn {
+    margin: 10px 0; /* Margen vertical para botones */
+    border: none; /* Sin borde */
+    transition: background-color 0.3s; /* Transición suave para hover */
+}
+
+.btn-primary {
+    background-color: #6fa6d4 !important; /* Color de fondo del botón Agregar/Modificar (celeste) */
+    border-color: #6fa6d4 !important; /* Borde del botón Agregar/Modificar */
+    color: white; /* Texto en blanco */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.form-label {
+    font-weight: bold; /* Negrita para las etiquetas del formulario */
+    color: #14092b; /* Color del texto de las etiquetas (azul muy oscuro) */
+    margin-bottom: 5px; /* Margen inferior para separación */
+}
+
+input.form-control {
+    border: 1px solid #6f4f8f; /* Borde del campo de entrada (violeta claro) */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior para separación entre campos */
+}
+
+.btn-warning {
+    background-color: #6f4f8f; /* Color de fondo del botón Modificar (violeta claro) */
+    border-color: #6f4f8f; /* Borde del botón Modificar */
+    color: white; /* Texto en blanco */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para hover */
+}
+
+.btn-warning:hover {
+    background-color: rgba(111, 79, 143, 0.8); /* Efecto hover para botón Modificar */
+}
+
+.btn-danger {
+    background-color: #6fa6d4; /* Color de fondo del botón Eliminar (celeste) */
+    border-color: #6fa6d4; /* Borde del botón Eliminar */
+    color: white; /* Texto en blanco */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para hover */
+}
+
+.btn-danger:hover {
+    background-color: rgba(111, 166, 212, 0.8); /* Efecto hover para botón Eliminar */
+}
